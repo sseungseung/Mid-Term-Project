@@ -1,166 +1,221 @@
 <!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>이승은의 홈페이지</title>
   <style>
-    header{
-      width: 100%;
-      background-color: lightgray;
-    }
-    .content__left{
-      float:left;
-      width:30%;
-      height: auto;
-      text-align: center;
-      
-    }
-    .content__right{
-      float:right;
-      width:70%;
-      background-color: lightgray;
-      text-align: center;
-    
-      div div {
-        display: inline-block;
-        border:2px solid black; 
-        background-color: white;
-        margin: 10px;
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
-      }
-      } 
-  
-    footer{
-      text-align: center;
-      clear:both;
-      width:100%;
-    }
-    table{
-                border-top: 1px solid gainsboro;
-                border-right: 1px solid gainsboro;
-                border-left: 1px solid gainsboro;
-                display: inline-block
-            }
-            tr, td{
-                border: 1px
-            }
-            tr .category{
-                width: 70px;
-                height: 40px;
-                background: gainsboro;
-                font-weight: bold;
-                
-            }
-            tr .content{
-                width: 180px;
-                height: 30px;
-                border-bottom: 1px solid gainsboro
-            }
-
-     body {
-      width: 980px; /* 페이지 전체 너비를 980px로 설정 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ece4f9;
       margin: 0;
-      
+      padding: 0;
+      color: #333;
     }
-    ul{
-      list-style-type: none;
-      margin:0;
-      padding:0;
-      overflow: hidden;
-      background-color:gray;
-    }
-    li{
-      float:left;
-    }
-    li a {
-      display: inline-block;
+    header {
+      background-color: #000000;
       color: white;
-      text-align:center;
-      padding:14px 16px;
-      text-decoration:none;
+      padding: 20px;
+      text-align: center;
     }
-    li a:hover{
-      background-color:#353535;
+    nav {
+      background-color: #4f4f4f;
     }
-     
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: rgb(251, 251, 251);
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #ccc6ef;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .profile, .content {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .profile img {
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .profile table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .profile table, .profile th, .profile td {
+      border: 1px solid #ddd;
+    }
+    .profile th, .profile td {
+      padding: 10px;
+      text-align: left;
+    }
+    .profile th {
+      background-color: #f2f2f2;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skill-item {
+      margin: 10px;
+      text-align: center;
+    }
+    .skill-item img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background-color: #9370DB;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
-    <header>
-      <p style="text-align:center; 
-      background-color: black;color:white;
-      padding:20px 0;
-      margin-bottom:0; margin-top: 0;font-size:40px;">이승은의 홈페이지</p>
-    </header>
-    <div class="content">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#Profile">Profile</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
+  <header>
+    <h1>이승은의 홈페이지</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">home</a></li>
+      <li><a href="#profile">profile</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#hobbies">hobbies</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div id="home" class="content">
+      <h2>home</h2>
+      <p>환영합니다! 이승은의 홈페이지에 오신 것을 환영합니다.</p>
     </div>
-      <div class="content__left">
-        <br>
-        <h2>32217553 이승은 </h2>
-        <img src="https://i.namu.wiki/i/ziFafRJYlPFqCYjo60YxRE-ebZ7HmEdZMTYZmiwQBXUzQHblC00fUPBpFbsIz9-wB4w7VzcOBvNSZXo6xZaijA.webp" width="100"><br>
-        <br>
-        <table>
-          <tr>
-              <td class="category">이름</td><td class="content">이승은</td>
-          </tr>
-          <tr>
-              <td class="category">학번</td><td class="content">32217553</td>
-          </tr>
-          <tr>
-              <td class="category">학과</td><td class="content">사이버보안학과</td>
-          </tr>
-          <tr>
-              <td  class="category">학년</td><td class="content">4학년</td>
-          </tr>
+    <div id="profile" class="profile">
+      <h2>profile</h2>
+      <img src="https://w7.pngwing.com/pngs/546/974/png-transparent-tweety-cartoon-hello-kitty-tweety-bird-television-vertebrate-cartoon.png" alt="Profile Picture" width="150">
+      <table>
+        <tr>
+          <th>이름</th>
+          <td>이승은</td>
+        </tr>
+        <tr>
+          <th>학번</th>
+          <td>32217553</td>
+        </tr>
+        <tr>
+          <th>학과</th>
+          <td>사이버보안학과</td>
+        </tr>
+        <tr>
+          <th>학년</th>
+          <td>4학년</td>
+        </tr>
       </table>
-      </div>
-      <div class="content__right">
-        <h3>Education</h3>
-        <p> 2024 웹프로그래밍</p>
-        <hr>
-        <br>
-        <h3>Skills</h3>
-        <div style="background:lightgray">
-          <div>
-          <img width="150" height="200" src="https://i.namu.wiki/i/Rv7cLGvX03Y-IX85VC6HXqtKuAhofMYJdodeW2v38Ghm6eCgDCqAhjXWcAWb0MB5UdvweeYI8QLNalwMevPplw.svg">
-          </div>
-          <div>
-          <img width="150" height="200" src="https://i.namu.wiki/i/MuCO_ocla-FyadGnRZytkRLggQOcqxv_hXNjN7aYXDOPivIChJNdiRXp6vwSXbM6GcUL3pVTL-5U5TKQ0f1YhA.svg">
-          </div>
-          <div>
-          <img width="150" height="200" src="https://i.namu.wiki/i/KcqDuQYTxNpUcLIMZTg28QXse0XiWx1G7K68kYYCo1GuhoHmhB_V8Qe9odGGt0BH9-0nQZTN53WXTNpDmwVfWQ.svg">
-          </div>
-          </div>
-          <div style="background:lightgray">
-          <div>
-          <img width="150" height="200" src="https://blog.kakaocdn.net/dn/bkW9WF/btqUUqEfEIe/DPIdxrtKafxzW1fjbhO1K1/img.png">
-          </div>
-          <div>
-            <img width="150" height="200" src="https://w1.pngwing.com/pngs/136/126/png-transparent-javascript-logo-angularjs-nodejs-computer-programming-web-development-computer-software-jquery-yellow-thumbnail.png">
-          </div>
-          <div>
-            <img width="150" height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png">
-          </div>
-           </div>
+    </div>
+    <div id="education" class="content">
+      <h2>education</h2>
+      <p>2024 웹프로그래밍</p>
+      <hr>
+    </div>
+    <div id="skills" class="content">
+      <h2>skills</h2>
+      <div class="skills">
+        <div class="skill-item">
+          <img src="https://i.namu.wiki/i/Rv7cLGvX03Y-IX85VC6HXqtKuAhofMYJdodeW2v38Ghm6eCgDCqAhjXWcAWb0MB5UdvweeYI8QLNalwMevPplw.svg" alt="C++">
+          <p>C++</p>
         </div>
-    
   
-      <footer class="clear">
-        <br>
-        <details>
-          <summary>Youtube<br></summary>
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/l2Hh4hsq9l0?si=DhJIvsu9nNWTt8jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </details>
-      <p><i>copyright &copy; 2024 SeungEun Lee</i></p>
-      </footer>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Python">
+          <p>Python</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://velog.velcdn.com/images/taetae-5/post/9ef6437d-5bbc-40e5-9895-92e7e84f91dc/image.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+       
+        
+      </div>
+    </div>
+    <div id="projects" class="content">
+      <h2>프로젝트</h2>
+      <div>
+        <h3>사이버보안 시스템 개발</h3>
+        <p>사이버 공격을 방어하기 위한 고급 보안 시스템을 개발하였습니다. 이 프로젝트는 최신 보안 프로토콜을 사용하여 기업의 데이터 보호를 강화했습니다.</p>
+        <p><strong>완료일:</strong> 2023년 12월</p>
+      </div>
+      <hr>
+      <div>
+        <h3>웹 애플리케이션 성능 최적화</h3>
+        <p>기존의 웹 애플리케이션의 성능을 향상시키기 위한 최적화 작업을 수행했습니다. 이 프로젝트는 로딩 시간을 단축하고 사용자 경험을 개선하는 데 중점을 두었습니다.</p>
+        <p><strong>완료일:</strong> 2023년 6월</p>
+      </div>
+      <hr>
+      <div>
+        <h3>모바일 앱 개발</h3>
+        <p>사용자 친화적인 인터페이스를 갖춘 모바일 애플리케이션을 개발했습니다. 이 앱은 다양한 플랫폼에서 원활하게 작동하며 사용자 피드백을 반영한 기능을 포함하고 있습니다.</p>
+        <p><strong>완료일:</strong> 2022년 11월</p>
+      </div>
+    </div>
+    <div id="hobbies" class="content">
+      <h2>취미</h2>
+      <div>
+        <h3>여행</h3>
+        <p>새로운 장소를 탐험하고 다양한 문화를 경험하는 것을 좋아합니다. 최근에는 일본과 유럽을 여행하며 많은 것을 배웠습니다.</p>
+      </div>
+      <hr>
+      <div>
+        <h3>독서</h3>
+        <p>기술 서적부터 소설까지 다양한 장르의 책을 읽는 것을 즐깁니다. 특히 사이버보안 관련 서적에 관심이 많습니다.</p>
+      </div>
+      <hr>
+      <div>
+        <h3>요리</h3>
+        <p>새로운 레시피를 시도하고 다양한 음식을 만드는 것을 좋아합니다. 최근에는 베이킹에 도전하여 케이크와 쿠키를 만들어보았습니다.</p>
+      </div>
+    </div>
+    <div id="contact" class="content">
+      <h2>연락처</h2>
+      <p>이메일: seungun2896@naver.com</p>
+      <p>전화번호: 010-9992-0000</p>
+      <details>
+        <summary>Youtube<br></summary>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/l2Hh4hsq9l0?si=DhJIvsu9nNWTt8jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </details>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 SeungEun Lee</p>
+  </footer>
 </body>
 </html>
-</div>
+
